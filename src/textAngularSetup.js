@@ -156,6 +156,7 @@ angular.module('textAngularSetup', [])
 		dialogPrompt: "Please enter a URL to insert"
 	},
 	editLink: {
+    popoverWidth: 440,
 		reLinkButton: {
 			tooltip: "Relink"
 		},
@@ -602,7 +603,7 @@ angular.module('textAngularSetup', [])
 				// setup the editor toolbar
 				// Credit to the work at http://hackerwins.github.io/summernote/ for this editbar logic
 				event.preventDefault();
-				editorScope.displayElements.popover.css('width', '435px');
+				editorScope.displayElements.popover.css('width',  taTranslations.editLink.popoverWidth + 'px');
 				var container = editorScope.displayElements.popoverContainer;
 				container.empty();
 				container.css('line-height', '28px');
