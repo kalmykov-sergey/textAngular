@@ -156,7 +156,7 @@ angular.module('textAngularSetup', [])
 		dialogPrompt: "Please enter a URL to insert"
 	},
 	editLink: {
-    popoverWidth: 440,
+        popoverWidth: 440,
 		reLinkButton: {
 			tooltip: "Relink"
 		},
