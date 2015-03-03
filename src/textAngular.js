@@ -2,7 +2,7 @@
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.3.8
+Version 1.3.7
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
@@ -2027,13 +2027,15 @@ textAngular.directive("textAngular", [
 					'id': 'taHtmlElement' + _serial,
 					'ng-show': 'showHtml',
 					'ta-bind': 'ta-bind',
-					'ng-model': 'html'
+					'ng-model': 'html',
+                    name: 'taHtmlElement' + _serial
 				});
 				scope.displayElements.text.attr({
 					'id': 'taTextElement' + _serial,
 					'contentEditable': 'true',
 					'ta-bind': 'ta-bind',
-					'ng-model': 'html'
+					'ng-model': 'html',
+                    name: 'taTextElement' + _serial
 				});
 				scope.displayElements.scrollWindow.attr({'ng-hide': 'showHtml'});
 				if(attrs.taDefaultWrap) scope.displayElements.text.attr('ta-default-wrap', attrs.taDefaultWrap);
@@ -2800,3 +2802,4 @@ textAngular.directive('textAngularToolbar', [
 		};
 	}
 ]);})();
+//# sourceMappingURL=textAngular.js.map

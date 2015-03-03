@@ -103,7 +103,8 @@ module.exports = function (grunt) {
 		concat: {
 			options: {
 				banner: "/*\n@license textAngular\nAuthor : Austin Anderson\nLicense : 2013 MIT\nVersion <%- pkg.version %>\n\nSee README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.\n*/\n\n(function(){ // encapsulate all variables so they don't become global vars\n\"Use Strict\";",
-				footer: "})();"
+				footer: "})();",
+                sourceMap: true
 			},
 			dist: {
 				src: ['lib/globals.js','lib/factories.js','lib/DOM.js','lib/validators.js','lib/taBind.js','lib/main.js'],
@@ -117,13 +118,24 @@ module.exports = function (grunt) {
 				wrap: true,
 				preserveComments: 'some'
 			},
-			my_target: {
+			my_core: {
 				files: {
-					'dist/textAngular-rangy.min.js': ['bower_components/rangy/rangy-core.js', 'bower_components/rangy/rangy-selectionsaverestore.js'],
-					'dist/textAngular.min.js': ['src/textAngularSetup.js','src/textAngular.js'],
-					'dist/textAngular-sanitize.min.js': ['src/textAngular-sanitize.js']
-				}
-			}
+					'dist/textAngular.min.js': ['src/textAngularSetup.js','src/textAngular.js']
+				}, 
+                options: {
+                    sourceMapIncludeSources : true,
+                    sourceMapIn : 'src/textAngular.js.map',
+                    sourceMap: 'textAngular.map',
+                    sourceMapRoot: 'dist/',
+                    sourceMappingURL: '../textAngular.map'
+                }
+			},
+            my_other: {
+                files: {
+                    'dist/textAngular-rangy.min.js': ['bower_components/rangy/rangy-core.js', 'bower_components/rangy/rangy-selectionsaverestore.js'],
+                    'dist/textAngular-sanitize.min.js': ['src/textAngular-sanitize.js']
+                }
+            }
 		},
 		watch: {
 			files: "lib/*.js",
