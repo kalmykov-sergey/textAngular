@@ -2028,14 +2028,14 @@ textAngular.directive("textAngular", [
 					'ng-show': 'showHtml',
 					'ta-bind': 'ta-bind',
 					'ng-model': 'html',
-                    name: 'taHtmlElement' + _serial
+                    name: attrs.name || 'taHtmlElement' + _serial
 				});
 				scope.displayElements.text.attr({
 					'id': 'taTextElement' + _serial,
 					'contentEditable': 'true',
 					'ta-bind': 'ta-bind',
 					'ng-model': 'html',
-                    name: 'taTextElement' + _serial
+                    name: attrs.name || 'taTextElement' + _serial
 				});
 				scope.displayElements.scrollWindow.attr({'ng-hide': 'showHtml'});
 				if(attrs.taDefaultWrap) scope.displayElements.text.attr('ta-default-wrap', attrs.taDefaultWrap);
