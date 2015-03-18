@@ -1,6 +1,6 @@
 {
   "name": "textAngular-no-style",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": [
     "./src/textAngular.js",
     "./src/textAngular-sanitize.js",
