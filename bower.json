@@ -1,6 +1,6 @@
 {
   "name": "textAngular-no-style",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": [
     "./src/textAngular.js",
     "./src/textAngular-sanitize.js",
@@ -23,7 +23,7 @@
     "package.json"
   ],
   "dependencies": {
-    "angular": "^1.2.x",
+    "angular": "1.2",
     "rangy": "^1.2.0"
   },
   "devDependencies": {
